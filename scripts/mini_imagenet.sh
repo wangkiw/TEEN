@@ -1,0 +1,15 @@
+python train.py teen \
+    -project teen \
+    -dataset mini_imagenet \
+    -dataroot MINI_DATA_DIR \
+    -base_mode 'ft_cos' \
+    -new_mode 'avg_cos' \
+    -gamma 0.1 \
+    -lr_base 0.1 \
+    -decay 0.0005 \
+    -epochs_base 1000 \
+    -schedule Cosine \
+    -tmax 1000 \
+    -gpu '2' \
+    -temperature 32 \
+    -batch_size_base 128
